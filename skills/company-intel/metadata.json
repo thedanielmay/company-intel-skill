@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Intelligence Research",
+  "date": "May 2026",
+  "abstract": "Structured intelligence-gathering skill for named legal entities — companies, private SMEs, ASX-listed companies, PE-backed businesses, NFPs/charities, government agencies, and foreign subsidiaries. 11 research phases, 7 entity-type modules (STA/SME/ASX/PEQ/NFP/GOV/FOR) with per-type KIT defaults and source priorities. Anti-hallucination enforcement: Cite-Before-You-Write, Numeric Quarantine, Fabrication Detection Pass with company-specific risk patterns. Privacy compliance checkpoint. Adversarial search step. Four-layer web access. Australian-specific sources (ASIC, ACNC, PPSR, AusTender, AustLII). PDF synthesis deliverable."
+}
