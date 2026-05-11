@@ -18,6 +18,44 @@ A structured intelligence-gathering skill that performs deep, multi-source resea
 
 **Announce at start:** "Using the company-intel skill to conduct a deep background investigation."
 
+## Dependency Check
+
+Before doing anything else, check whether the following skills appear in the available skill list for this session:
+
+- `expert-panel`
+- `document-skills:pdf`
+- `data-visualization`
+- `topic-intel`
+
+If ANY are missing, say:
+
+> "company-intel works best with its full skill set. The following skills are missing from this session:
+> [list the missing ones]
+>
+> Install them using either method below, then restart your session:
+>
+> **`expert-panel`**
+> - `npx skills add thedanielmay/expert-panel-skill`
+> - `/plugin install expert-panel@thedanielmay`
+>
+> **`document-skills:pdf`**
+> - `npx skills add anthropics/claude-plugins-official@document-skills`
+>
+> **`data-visualization`**
+> - `npx skills add anthropics/claude-plugins-official@data-visualization`
+>
+> **`topic-intel`**
+> - `npx skills add thedanielmay/topic-intel-skill`
+> - `/plugin install topic-intel@thedanielmay`
+>
+> Or type **'continue anyway'** to proceed — steps that need missing skills will be skipped."
+
+If the user types 'continue anyway', note which skills are unavailable and proceed. When a missing skill would normally be invoked, skip that step and note it inline: "(skipped — `topic-intel` not available)".
+
+If all skills are present, proceed silently without mentioning the check.
+
+---
+
 **Reference files:** This skill uses detailed reference documents. Read them when each phase requires their specific guidance:
 - `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` — **Read this first at the start of every investigation.** Universal standards: STOP gate, scoping document, KIT Answer Register, confidence ratings, saturation rule, wave thresholds, progress reporting, synthesis sequence, universal deliverables, disambiguation routing, tool check, ethical boundaries.
 - `~/.claude/skills/shared/references/web-access-layers.md` — Four-layer web access architecture.
