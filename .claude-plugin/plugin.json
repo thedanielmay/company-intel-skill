@@ -1,10 +1,21 @@
 {
   "name": "company-intel-skill",
-  "description": "Deep background research and competitive intelligence on any company or organisation — entity verification, financial intelligence, people profiling, digital footprint, and competitive analysis.",
-  "version": "1.0.0",
+  "description": "Deep background research and competitive intelligence on any company or organisation \u2014 entity verification, financial intelligence, people profiling, digital footprint, and competitive analysis.",
+  "version": "1.1.0",
   "author": {
     "name": "Daniel May",
     "email": "daniel@thedanielmay.com"
   },
-  "keywords": ["research", "intelligence", "osint", "due diligence", "competitive intelligence", "company research", "financial intelligence", "australian", "asic", "acnc"]
+  "keywords": [
+    "research",
+    "intelligence",
+    "osint",
+    "due diligence",
+    "competitive intelligence",
+    "company research",
+    "financial intelligence",
+    "australian",
+    "asic",
+    "acnc"
+  ]
 }
