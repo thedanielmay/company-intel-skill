@@ -18,7 +18,7 @@ Companies, private SMEs, ASX-listed companies, PE-backed businesses, NFPs/charit
 | GOV | Government agency | Legislation, Portfolio Budget Statements, ANAO, Hansard |
 | FOR | Foreign subsidiary | Parent filings, ASIC foreign company, FIRB |
 
-## v1.0.0 — Anti-Hallucination Protocol
+## Anti-Hallucination Protocol
 
 - **Cite-Before-You-Write** — every synthesis claim mapped to a source file before prose is written
 - **Numeric Quarantine** — every number verified against its source file before PDF generation
@@ -28,6 +28,20 @@ Companies, private SMEs, ASX-listed companies, PE-backed businesses, NFPs/charit
 - **Adversarial Search** — counter-hypothesis queries run before synthesis to surface unknown risks
 
 ## Install
+
+Install as a plugin:
+
+```
+/plugin install company-intel-skill --marketplace thedanielmay/company-intel-skill
+```
+
+Or link the folder into your skills directory:
+
+```
+ln -s /path/to/company-intel-skill/skills/company-intel ~/.claude/skills/company-intel
+```
+
+Or use the skills CLI:
 
 ```bash
 npx skills add thedanielmay/company-intel-skill
