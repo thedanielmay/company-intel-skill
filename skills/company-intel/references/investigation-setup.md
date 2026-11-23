@@ -78,19 +78,19 @@ Which would you like? (1-5)
 
 ## Investigation Tiers
 
-After identifying the company, offer the investigation depth:
+After identifying the company, offer the investigation depth. Ask the user to choose a depth before research starts. Use a depth named in the request without asking again.
 
 ```
 INVESTIGATION DEPTH
 ───────────────────
 1. Quick Scan          — Identity, website overview, recent news, key people. Fast.
 2. Standard            — All of Quick Scan + social, reviews, financials, digital footprint.
-3. Full Investigation  — (default) Everything. All sources, media downloads, deep analysis,
+3. Full Investigation  — Everything. All sources, media downloads, deep analysis,
                           PDF synthesis, expert QA review.
 4. Revenue Discovery   — Streamlined research + deep revenue opportunity mapping.
                           For social enterprises and NFPs in financial crisis.
 
-Which tier? (1-4, default: 3)
+Which depth? (1 to 4; suggested: 1 Quick Scan)
 ```
 
 ---

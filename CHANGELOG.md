@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0 - 2026-11-23
+
+- Narrowed the description so the skill starts on a request for research, due diligence, a dossier, a deep dive, a brief or intelligence on a named subject, or when the user names the skill. Removed the phrases that started the skill on any mention of a company. Kept the note that sends industry, market, sector, policy and regulation subjects to topic-intel.
+- Removed the default from Full Investigation. The skill asks the user to choose a depth. Quick Scan is the suggested depth. Use a depth named in the request without asking again.
+- Removed the setup block duplicated between SKILL.md and references/investigation-setup.md. SKILL.md now points to that reference for the dependency check, disambiguation, invocation modes, depth menu, web access and folder structure.
+- Added a one-line load trigger to each reference in the SKILL.md list that lacked a phase or step.
+
 ## 1.5.0 - 2026-11-23
 
 - Added sanctions and PEP screening of the company, directors and beneficial owners against the DFAT, OFAC, UN, UK and EU lists and against PEP data. Each check records its date. A name match is a possible match until identity matching confirms it. A clear result reads "no match found on <date>", not "clean".

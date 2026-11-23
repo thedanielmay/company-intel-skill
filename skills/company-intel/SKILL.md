@@ -1,9 +1,9 @@
 ---
 name: company-intel
-description: "Deep background research and competitive intelligence on any company or organisation. Use this skill whenever the user wants to research a company, investigate a competitor, perform due diligence, understand an organisation's history and people, or prepare for a sales engagement. Triggers include: any mention of 'research [company]', 'look into [company]', 'background on [company]', 'due diligence', 'competitor analysis', 'who is [company]', or any request to understand a company's operations, financials, people, reputation, or digital presence. Also use when preparing for meetings with or pitches to a specific organisation. Even if the user just mentions wanting to know more about a company, invoke this skill."
+description: "Deep background research and competitive intelligence on a named company or organisation. Use this skill when the user asks for research, due diligence, a dossier, a deep dive, a brief or intelligence on a named subject, or names this skill. Triggers include: 'research [company]', 'due diligence on [company]', 'background on [company]', 'competitor analysis', 'who is [company]', 'prepare a dossier on [company]'. Also use when preparing for meetings with or pitches to a specific organisation. For an industry, market, sector, policy or regulation rather than one named entity, use topic-intel instead."
 license: MIT
 metadata:
-  version: "1.5.0"
+  version: "1.6.0"
 ---
 
 # Company Intelligence Research
@@ -29,19 +29,19 @@ Before doing anything else, run the dependency check in `references/investigatio
 
 Read each file when its trigger fires. Each file holds the detail that this body points to.
 
-- `references/investigation-setup.md`: read at the start of every investigation for the dependency check, disambiguation, invocation menus, tiers, web access layers and folder structure.
+- `references/investigation-setup.md`: read at the start of every investigation for the dependency check, disambiguation, invocation menus, tier menu, web access layers and folder structure.
 - `references/phase-playbook.md`: read before each research phase for the full step-by-step work.
 - `references/ongoing-protocols.md`: read during and after the waves for progress reporting, the research log, confidence ratings, saturation and refresh.
-- `references/australian-data-sources.md`: read for the register of Australian data sources.
-- `references/osint-techniques.md`: read for DNS, metadata, search operators, ad libraries and web archaeology.
-- `references/analytical-frameworks.md`: read for analytical frameworks and templates.
-- `references/investigative-methods.md`: read for investigative journalism and due diligence techniques.
-- `references/synthesis-outputs.md`: read for synthesis templates and deliverable formats.
+- `references/australian-data-sources.md`: read at Phase 5 for Australian registers and source guidance.
+- `references/osint-techniques.md`: read at Phase 8 for DNS, metadata, search operators, ad libraries and web archaeology.
+- `references/analytical-frameworks.md`: read at Phase 11 for frameworks and templates.
+- `references/investigative-methods.md`: read at Phase 5 and Phase 6 for due diligence and investigative techniques.
+- `references/synthesis-outputs.md`: read at Phase 11 for synthesis templates and deliverable formats.
 - `company-entity-modules.md`: read at Phase 0 Step 2 for the entity type modules.
 - `company-expert-panels.md`: read at Phase 11 for the expert panel sets.
-- `company-agent-dispatch.md`: read when dispatching parallel agents.
+- `company-agent-dispatch.md`: read before Wave 1 when dispatching parallel agents.
 - `references/INTELLIGENCE-STANDARDS.md`: read first at the start of every investigation.
-- `references/web-access-layers.md`: read for the four-layer web access architecture.
+- `references/web-access-layers.md`: read at investigation start for the four-layer web access protocol.
 - `references/layer-4-playwright-protocol.md`: read when Layer 4 is triggered.
 
 If a bundled reference under `references/` is missing, say so and carry on with this skill's own steps.
@@ -50,76 +50,23 @@ If a bundled reference under `references/` is missing, say so and carry on with 
 
 ## Disambiguation
 
-Confirm the subject is a named legal entity, not a broader topic. Read `references/investigation-setup.md` for the full classification table and the disambiguation prompt.
-
-| Subject type | Use |
-|---|---|
-| Named company, charity, trust, government agency | company-intel, this skill |
-| Industry, market or sector, not one company | topic-intel |
-| Policy, regulation or framework | topic-intel |
-| Ambiguous subject | Show the prompt in INTELLIGENCE-STANDARDS.md Section 14 |
-
-If the user selects T, exit this skill and invoke topic-intel. If the user selects B, complete this investigation, then invoke topic-intel for sector context. In Phase 10, a full topic-intel study of the sector is often better than a lightweight market analysis here.
+Confirm the subject is a named legal entity, not a broader topic. Read the Disambiguation section in `references/investigation-setup.md` for the classification table and the prompt. Use topic-intel for an industry, market, sector, policy or regulation rather than one named entity. If the user selects both, finish this investigation, then invoke topic-intel for sector context.
 
 ---
 
 ## Invocation Modes
 
-**Menu-driven, the default:** use this menu when the user invokes the skill without naming a company.
-
-```
-COMPANY INTELLIGENCE RESEARCH
------------------------------
-1. New Investigation      - Start research on a company
-2. Resume Investigation   - Continue an existing research dossier
-3. Refresh Investigation  - Update an existing dossier with new data
-4. Quick Scan             - Fast overview, 30 minutes equivalent
-5. Revenue Discovery      - Find revenue opportunities for a social enterprise in crisis
-
-Which would you like? (1-5)
-```
-
-**Direct invocation:** when the user names a company, skip the menu and go to Phase 0. Skipping the menu does not skip Phase 0. If depth and KITs are not specified, complete all Phase 0 steps, including the Company Scoping Document, before research begins.
+Read the Invocation Modes section in `references/investigation-setup.md` for the menu. Use the menu when the user does not name a company. Skip the menu when the user names a company. Skipping the menu does not skip Phase 0. If the user names a company but gives no depth or KITs, finish every Phase 0 step, including the Company Scoping Document, before research begins.
 
 ## Investigation Tiers
 
-Offer the investigation depth after the company is identified.
-
-```
-INVESTIGATION DEPTH
--------------------
-1. Quick Scan          - Identity, website overview, recent news, key people. Fast.
-2. Standard            - All of Quick Scan plus social, reviews, financials, digital footprint.
-3. Full Investigation  - default. Everything: all sources, media downloads, deep analysis,
-                         PDF synthesis, expert QA review.
-4. Revenue Discovery   - Streamlined research plus deep revenue opportunity mapping.
-                         For social enterprises and NFPs in financial crisis.
-
-Which tier? (1-4, default: 3)
-```
+Read the Investigation Tiers section in `references/investigation-setup.md` for the depth menu. Offer the depth after the company is identified. Ask the user to choose a depth before research starts. Use a depth named in the request without asking again. Quick Scan is the suggested depth.
 
 ---
 
 ## Web Access: Four-Layer Architecture
 
-Read `references/web-access-layers.md` for the full protocol.
-
-- Layer 1, API first: ABR, ACNC, GrantConnect, AusTender, ASX. This is the fastest and most reliable layer.
-- Layer 2, search as router: use WebSearch to find the exact URL, then fetch only that URL. Never crawl blind.
-- Layer 3, scraping service: use when WebFetch returns blocked content and a service is configured.
-- Layer 4, Playwright: opt in. Use it only after the user says yes for the named source.
-
-**Opt-in rule:** if Layers 1 to 3 fail or do not apply, tell the user the source and the reason. Run Layer 4 only after the user says yes for that source. On a no, or when Playwright is not installed, log the source as a gap with the reason. Do not use Layer 4 on a source behind a login. Sources that often need Layer 4 include ACNC charity profile pages, Glassdoor, Facebook Ad Library, ASIC Connect search results, and any gov.au page with a CAPTCHA or session error.
-
-**Wayback Machine:** web.archive.org is blocked. Use the CDX API:
-
-```bash
-curl "http://web.archive.org/cdx/search/cdx?url={domain}&output=json&limit=20"
-```
-
-**Pre-investigation tool check:** run once at investigation start. See INTELLIGENCE-STANDARDS.md Section 15 for the exact commands. Record the real results in `research-log.md`.
-
-**Cascade failure prevention:** run no more than 3 or 4 WebFetch calls in parallel. Keep slow sources such as ACNC and gov.au in sequential calls.
+Read `references/investigation-setup.md` for the layer summary and the pre-investigation tool check. Read `references/web-access-layers.md` for the full protocol. Read `references/layer-4-playwright-protocol.md` before using Layer 4. Use Layer 4 only after the user says yes for the named source. Log a source as a gap on a no or when Playwright is not installed. Do not use Layer 4 on a source behind a login.
 
 ---
 
