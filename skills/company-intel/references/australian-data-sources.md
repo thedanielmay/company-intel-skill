@@ -82,7 +82,7 @@ Note: ABR API requires a GUID (free registration at abr.business.gov.au/Register
 When a paywalled source is the most authoritative source for a KIT answer:
 1. Note it as inaccessible in `inaccessible-sources.md` with failure mode: `Paywalled — no free access`
 2. Search for a free proxy: academic open access, author's ResearchGate page, press release summarising findings, or trade press coverage
-3. If a free proxy exists, use it with ★★ rating (not ★★★ — the proxy may summarise selectively)
+3. If a free proxy exists, use it with grade B2, not A1, because the proxy may summarise selectively
 4. If no free proxy exists, note the gap explicitly in the Information Gaps Register and state what the paywalled source would have answered
 
 ---

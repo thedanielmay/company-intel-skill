@@ -6,6 +6,7 @@
 - Added an identity matching rule for director and person searches. Two records link only when two independent identifiers agree. A name alone never links them. Unconfirmed matches are reported as separate people.
 - Added a cost note for ASIC company and person extracts and other paid register extracts. The skill asks the user before buying an extract and names the register and price shown.
 - Moved director and beneficial owner property and home address searches behind the Phase 0 privacy checkpoint. They run only when the user confirms a due diligence purpose that needs them.
+- Claims now use the two grades in INTELLIGENCE-STANDARDS.md Section 4. The grades are source reliability A to F and information credibility 1 to 6. Write them together, for example B2. Added a funder check for analyst, industry, think-tank and vendor reports. A report funded by an interested party cannot grade above C for reliability on that topic. Keep ⚠ for a claim another source contradicts. Scenario likelihood uses words instead of percentages. Use remote, unlikely, roughly even, likely or almost certain.
 
 ## 1.4.0 - 2026-11-23
 

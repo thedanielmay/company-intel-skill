@@ -80,7 +80,7 @@ Classify the entity on intake. If ambiguous between two types, present both opti
 - Phase 6 (People) — high: owner-operated = people ARE the business
 - Phase 7 (Reputation) — high: Glassdoor and reviews matter more here than for larger entities
 
-**Phase 5 note (data-currency warning):** ASIC data reflects filings as of lodgement date. Director changes, share transfers, and address updates may lag by weeks to months. Always check the "Document History" tab for recent filings and note the last-lodged date. Rate ASIC-derived structural information as ★★★ for official status but flag the potential recency lag.
+**Phase 5 note (data-currency warning):** ASIC data reflects filings as of lodgement date. Director changes, share transfers, and address updates may lag by weeks to months. Always check the "Document History" tab for recent filings and note the last-lodged date. Rate ASIC-derived structural information as A1 for official status but flag the potential recency lag.
 
 **Output variant:** SME Intelligence Brief — ownership and control, financial health signals, customer and procurement profile, reputational picture, key risks.
 
@@ -141,7 +141,7 @@ Classify the entity on intake. If ambiguous between two types, present both opti
 - Phase 5 (Financial/Legal) — high: PPSR charges are particularly important (PE debt structures)
 - Phase 8 (Digital Footprint) — moderate: website changes post-acquisition signal repositioning
 
-**Phase 5 note (data-currency warning):** PE-backed companies have minimal public financial disclosure. ASIC extract will show structure but not financials. PPSR is the most reliable financial signal — security interests registered there reflect actual debt load as of registration date. Flag all financial estimates as ★ (inferred) unless from a disclosed source.
+**Phase 5 note (data-currency warning):** PE-backed companies have minimal public financial disclosure. ASIC extract will show structure but not financials. PPSR is the most reliable financial signal — security interests registered there reflect actual debt load as of registration date. Flag all financial estimates as C3 (inferred) unless from a disclosed source.
 
 **Output variant:** PE Intelligence Brief — ownership map, fund strategy and timeline, management profile, financial signals, exit pathway assessment, engagement implications.
 
@@ -173,7 +173,7 @@ Classify the entity on intake. If ambiguous between two types, present both opti
 - Phase 9 (Customers/Stakeholders) — high: beneficiary community and funder ecosystem
 - Phase 7 (Reputation) — high: community standing matters more here than commercial reputation
 
-**Phase 5 note (data-currency warning):** ACNC financial reports have a 12-18 month publication lag (must be lodged 6 months after financial year end). Rate ACNC financial data as ★★★ for accuracy but flag the lag explicitly. A 2024 ACNC report reflects financial position as of June 2023 — material change in the intervening period is possible and should be flagged.
+**Phase 5 note (data-currency warning):** ACNC financial reports have a 12-18 month publication lag (must be lodged 6 months after financial year end). Rate ACNC financial data as A1 for accuracy but flag the lag explicitly. A 2024 ACNC report reflects financial position as of June 2023 — material change in the intervening period is possible and should be flagged.
 
 **Output variant:** NFP Intelligence Brief — mission delivery assessment, financial health scorecard (reserves ratio, revenue concentration, grant cliff risk), governance quality, community standing, compliance profile.
 
@@ -234,6 +234,6 @@ Classify the entity on intake. If ambiguous between two types, present both opti
 - Phase 6 (People) — high: local leadership authority is often opaque without this
 - Phase 1 (Identification) — critical: must confirm Australian entity and map to parent
 
-**Phase 5 note (data-currency warning):** Australian subsidiary financial disclosures are minimal for foreign-owned entities. Parent company filings are authoritative but may not break out Australian operations. Rate Australian-specific financial estimates as ★ (inferred from parent disclosures) unless a subsidiary annual return has been filed.
+**Phase 5 note (data-currency warning):** Australian subsidiary financial disclosures are minimal for foreign-owned entities. Parent company filings are authoritative but may not break out Australian operations. Rate Australian-specific financial estimates as C3 (inferred from parent disclosures) unless a subsidiary annual return has been filed.
 
 **Output variant:** Foreign Subsidiary Intelligence Brief — parent entity profile, subsidiary role and authority, local financial signals, Australian leadership, regulatory position, engagement implications (local vs. headquarters decision-making).

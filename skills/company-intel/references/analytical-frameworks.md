@@ -2,6 +2,8 @@
 
 Reference document for all analytical frameworks used within the company-intel skill. Each framework includes a description, template, key questions it answers, and "So What?" guidance connecting analysis to the user's decision.
 
+Grades in templates use the two axes in Section 4 of INTELLIGENCE-STANDARDS.md: source reliability A to F and information credibility 1 to 6, written together. A1/B2/C3 in a template are examples from that scale, not a fixed list.
+
 Select frameworks based on the investigation purpose established in Phase 0. Every framework output in the final synthesis MUST include a "So What?" paragraph.
 
 ---
@@ -116,22 +118,22 @@ SWOT ANALYSIS — [Company]
 STRENGTHS (internal, positive)
 ──────────────────────────────
 │ Finding              │ Evidence Source   │ Action / Implication     │
-│ [strength]           │ [source, ★ rating]│ [what this means for you]│
+│ [strength]           │ [source, A1/B2/C3]│ [what this means for you]│
 
 WEAKNESSES (internal, negative)
 ───────────────────────────────
 │ Finding              │ Evidence Source   │ Action / Implication     │
-│ [weakness]           │ [source, ★ rating]│ [what this means for you]│
+│ [weakness]           │ [source, A1/B2/C3]│ [what this means for you]│
 
 OPPORTUNITIES (external, positive)
 ──────────────────────────────────
 │ Finding              │ Evidence Source   │ Action / Implication     │
-│ [opportunity]        │ [source, ★ rating]│ [what this means for you]│
+│ [opportunity]        │ [source, A1/B2/C3]│ [what this means for you]│
 
 THREATS (external, negative)
 ────────────────────────────
 │ Finding              │ Evidence Source   │ Action / Implication     │
-│ [threat]             │ [source, ★ rating]│ [what this means for you]│
+│ [threat]             │ [source, A1/B2/C3]│ [what this means for you]│
 
 STRATEGIC COMBINATIONS:
 - S+O: [strength that can exploit an opportunity]
@@ -542,15 +544,15 @@ TRENDS TO FLAG:
 ```
 UNIT ECONOMICS (ESTIMATED) — [Company]
 ════════════════════════════════════════════════════
-Metric                     │ Estimate   │ Confidence │ Source
+Metric                     │ Estimate   │ Grade      │ Source
 ───────────────────────────┼────────────┼────────────┼────────
-Total Customers            │ [number]   │ [★ rating] │ [src]
-Revenue per Customer       │ $[amount]  │ [★ rating] │ [src]
-Gross Margin per Customer  │ $[amount]  │ [★ rating] │ [derived]
+Total Customers            │ [number]   │ [A1/B2/C3] │ [src]
+Revenue per Customer       │ $[amount]  │ [A1/B2/C3] │ [src]
+Gross Margin per Customer  │ $[amount]  │ [A1/B2/C3] │ [derived]
 ───────────────────────────┼────────────┼────────────┼────────
-CAC (Customer Acq. Cost)   │ $[amount]  │ [★ rating] │ [est.]
+CAC (Customer Acq. Cost)   │ $[amount]  │ [A1/B2/C3] │ [est.]
   — Marketing spend / new customers acquired
-LTV (Lifetime Value)       │ $[amount]  │ [★ rating] │ [est.]
+LTV (Lifetime Value)       │ $[amount]  │ [A1/B2/C3] │ [est.]
   — Avg revenue × gross margin × avg lifespan
 LTV:CAC Ratio              │ [x]:1      │            │
 Payback Period (months)    │ [months]   │            │
@@ -1392,7 +1394,7 @@ SCENARIO ANALYSIS — [Company]
 
                │ BULL (Upside)    │ BASE (Most Likely) │ BEAR (Downside)
 ───────────────┼──────────────────┼────────────────────┼─────────────────
-Probability    │ [%]              │ [%]                │ [%]
+Likelihood     │ [word]           │ [word]             │ [word]
 ───────────────┼──────────────────┼────────────────────┼─────────────────
 Key Assumptions│ [what must be    │ [continuation of   │ [what goes
                │  true for this   │  current trends    │  wrong for this
@@ -1419,7 +1421,9 @@ KEY UNCERTAINTIES (factors that most affect which scenario materialises):
 3. [uncertainty 3]
 ```
 
-**So What? guidance:** The value is in the implications row and the trigger events. The user does not need to know the exact probability — they need to know what to watch for and how to respond. If the BEAR scenario is catastrophic and the triggers are plausible, that dominates the decision regardless of probability.
+Use one likelihood word per case: remote, unlikely, roughly even, likely, almost certain. Do not give a percentage.
+
+**So What? guidance:** The value is in the implications row and the trigger events. The user does not need a precise likelihood figure. They need to know what to watch for and how to respond. If the BEAR scenario is catastrophic and the triggers are plausible, that dominates the decision whatever the likelihood.
 
 ---
 

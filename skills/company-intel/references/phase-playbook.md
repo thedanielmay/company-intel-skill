@@ -258,7 +258,7 @@ Use this rule when a director search or person search produces two records that 
 ### Core Searches
 1. **Corporate registrations** — ASIC (full extract including historical document history), ABN Lookup (including Historical Details tab), ACNC for charities, ASX for listed companies.
 
-**Data-currency warning (applies to all registry sources):** Official registry data (ASIC, ACNC, ABR) reflects filings as of lodgement date. Corporate restructures, director changes, and address updates may lag weeks to months. Apply ★★★ confidence for official status, but always note the last-lodged date and flag that the structure may not reflect the current position. The entity-type module (loaded in Phase 0) specifies the typical lag for this entity type. Cross-reference any ASIC-derived structural finding against at least one other source (LinkedIn, media, company website) to check for signs of change.
+**Data-currency warning (applies to all registry sources):** Official registry data (ASIC, ACNC, ABR) reflects filings as of lodgement date. Corporate restructures, director changes, and address updates may lag weeks to months. Apply an A1 grade for official status, but always note the last-lodged date and flag that the structure may not reflect the current position. The entity-type module (loaded in Phase 0) specifies the typical lag for this entity type. Cross-reference any ASIC-derived structural finding against at least one other source (LinkedIn, media, company website) to check for signs of change.
 
 2. **Historical corporate structure** — Map name changes, director rotations, address shifts, share transfers over time ("Shedding Skin" technique). See `references/investigative-methods.md` Section 1.
 3. **Financial data** — ACNC financials, annual reports, ASX filings, government grant data (GrantConnect, state databases), tender history (AusTender + state portals).
@@ -435,7 +435,7 @@ Before proceeding to frameworks or deliverables, produce a structured answer for
 ```
 KIT [N]: [question]
 Answer:      [direct answer — 2–5 sentences. Lead with the answer, not the caveats.]
-Confidence:  [★★★ / ★★ / ★]
+Grade:       [A1 / B2 / C3]
 Key sources: [2–3 most authoritative sources used]
 Gaps:        [what would improve confidence if found]
 ```

@@ -2,6 +2,8 @@
 
 Reference document for Phase 11 (Synthesis) deliverables. Every investigation produces a purpose-specific synthesis assembled from these templates. Not all sections apply to every investigation — select based on the investigation purpose established in Phase 0.
 
+Grades in templates use the two axes in Section 4 of INTELLIGENCE-STANDARDS.md: source reliability A to F and information credibility 1 to 6, written together. A1/B2/C3 in a template are examples from that scale, not a fixed list. Keep ⚠ for a claim another source contradicts.
+
 ---
 
 ## 1. RAG Dashboard (Always First Page)
@@ -71,23 +73,23 @@ CRITICAL FINDINGS
 ═════════════════
 
 1. [Finding stated in one sentence]
-   Confidence: ★★★/★★/★/⚠  |  Detail: Section [X]
+   Grade:      A1/B2/C3/⚠  |  Detail: Section [X]
    Implication: [What this means for the decision at hand]
 
 2. [Finding stated in one sentence]
-   Confidence: ★★★/★★/★/⚠  |  Detail: Section [X]
+   Grade:      A1/B2/C3/⚠  |  Detail: Section [X]
    Implication: [What this means for the decision at hand]
 
 3. [Finding stated in one sentence]
-   Confidence: ★★★/★★/★/⚠  |  Detail: Section [X]
+   Grade:      A1/B2/C3/⚠  |  Detail: Section [X]
    Implication: [What this means for the decision at hand]
 
 4. [Finding stated in one sentence]
-   Confidence: ★★★/★★/★/⚠  |  Detail: Section [X]
+   Grade:      A1/B2/C3/⚠  |  Detail: Section [X]
    Implication: [What this means for the decision at hand]
 
 5. [Finding stated in one sentence]
-   Confidence: ★★★/★★/★/⚠  |  Detail: Section [X]
+   Grade:      A1/B2/C3/⚠  |  Detail: Section [X]
    Implication: [What this means for the decision at hand]
 ```
 
@@ -722,14 +724,14 @@ BUYING SIGNAL REGISTER
 ═══════════════════════════════════════════════════════════════════════
 Signal                        │ Type       │ Strength │ Window   │ Source
 ──────────────────────────────┼────────────┼──────────┼──────────┼────────
-[e.g. New CTO appointed]     │ Leadership │ HIGH     │ Now-90d  │ LinkedIn ★★
-[e.g. 3 data engineer roles] │ Pain       │ MEDIUM   │ Ongoing  │ Seek ★★
-[e.g. Series B closed]       │ Funding    │ HIGH     │ Now-180d │ AFR ★★★
-[e.g. "Digital transformation│ Strategic  │ MEDIUM   │ FY27     │ Annual Report ★★
+[e.g. New CTO appointed]     │ Leadership │ HIGH     │ Now-90d  │ LinkedIn B2
+[e.g. 3 data engineer roles] │ Pain       │ MEDIUM   │ Ongoing  │ Seek B2
+[e.g. Series B closed]       │ Funding    │ HIGH     │ Now-180d │ AFR A1
+[e.g. "Digital transformation│ Strategic  │ MEDIUM   │ FY27     │ Annual Report B2
  priority" in annual report] │            │          │          │
-[e.g. Mentioned legacy system │ Pain       │ HIGH     │ Now-90d  │ Conference talk ★★
+[e.g. Mentioned legacy system │ Pain       │ HIGH     │ Now-90d  │ Conference talk B2
  challenges at conference]   │            │          │          │
-[e.g. Incumbent contract     │ Contract   │ HIGH     │ Q3 2026  │ AusTender ★★★
+[e.g. Incumbent contract     │ Contract   │ HIGH     │ Q3 2026  │ AusTender A1
  expires Sep 2026]           │ Expiry     │          │          │
 ═══════════════════════════════════════════════════════════════════════
 ```
@@ -877,7 +879,7 @@ Include in every synthesis. Save as a section within `00-summary/synthesis.md`.
 SCENARIO ANALYSIS
 ═════════════════
 
-BULL CASE (Probability: [X]%)
+BULL CASE (Likelihood: [word])
 Conditions required:
 - [Condition 1]
 - [Condition 2]
@@ -886,7 +888,7 @@ Estimated outcome: [What this means for the decision — acquisition price, deal
 partnership value, competitive threat level]
 Key indicators to watch: [What would confirm this scenario is unfolding]
 
-BASE CASE (Probability: [X]%)
+BASE CASE (Likelihood: [word])
 Conditions required:
 - [Condition 1]
 - [Condition 2]
@@ -894,7 +896,7 @@ Conditions required:
 Estimated outcome: [What this means for the decision]
 Key indicators to watch: [What would confirm this scenario is unfolding]
 
-BEAR CASE (Probability: [X]%)
+BEAR CASE (Likelihood: [word])
 Conditions required:
 - [Condition 1]
 - [Condition 2]
@@ -902,7 +904,7 @@ Conditions required:
 Estimated outcome: [What this means for the decision]
 Key indicators to watch: [What would confirm this scenario is unfolding]
 
-PROBABILITIES MUST SUM TO 100%
+USE ONE LIKELIHOOD WORD PER CASE: remote, unlikely, roughly even, likely, almost certain. DO NOT USE A PERCENTAGE.
 ```
 
 ### Scenario Construction Rules
@@ -910,7 +912,7 @@ PROBABILITIES MUST SUM TO 100%
 - Each scenario must be internally consistent (conditions must logically produce the outcome)
 - Base case should reflect the most likely trajectory based on current evidence
 - Bull and bear cases should represent plausible extremes, not fantasy
-- Probability assignments must be justified by evidence, not gut feel
+- Likelihood words must be justified by evidence, not gut feel
 - Identify the 1-2 variables that determine which scenario unfolds (these become monitoring priorities)
 
 ---
@@ -1199,12 +1201,12 @@ Enhanced with source independence assessment. Include in every synthesis. Save a
 ```
 TRIANGULATION MATRIX
 ═══════════════════════════════════════════════════════════════════════════════════
-Finding          │ Source 1 (type) │ Source 2 (type) │ Source 3 (type) │ Confidence │ Independence
+Finding          │ Source 1 (type) │ Source 2 (type) │ Source 3 (type) │ Grade      │ Independence
 ─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────────┼─────────────
-[finding text]   │ [source] (P)    │ [source] (Si)   │ [source] (Sd)   │ ★★★        │ HIGH
-[finding text]   │ [source] (Sd)   │ [source] (Sd)   │ —               │ ★           │ LOW
-[finding text]   │ [source] (P)    │ [source] (Si)   │ [source] (P)    │ ★★★        │ HIGH
-[finding text]   │ [source] (P)    │ [source] (Sd)   │ [contradicts]   │ ⚠           │ —
+[finding text]   │ [source] (P)    │ [source] (Si)   │ [source] (Sd)   │ A1         │ HIGH
+[finding text]   │ [source] (Sd)   │ [source] (Sd)   │ —               │ C3         │ LOW
+[finding text]   │ [source] (P)    │ [source] (Si)   │ [source] (P)    │ A1         │ HIGH
+[finding text]   │ [source] (P)    │ [source] (Sd)   │ [contradicts]   │ ⚠          │ —
 ═══════════════════════════════════════════════════════════════════════════════════
 ```
 
@@ -1216,14 +1218,16 @@ Finding          │ Source 1 (type) │ Source 2 (type) │ Source 3 (type) │
 | Si | Secondary Independent | Independent journalism, analyst reports, academic research | Investigative journalism, independent analyst reports, academic papers, industry body reports |
 | Sd | Secondary Dependent | Company's own claims, reprinted press releases, sponsored content | Company website, press releases, company blog, sponsored articles, paid case studies, company social media |
 
-### Confidence Rating Rules
+### Grade Rules
 
-| Rating | Symbol | Criteria |
-|--------|--------|----------|
-| CONFIRMED | ★★★ | 2+ Primary sources, OR 1 Primary + 1 Secondary Independent |
-| HIGH | ★★★ | 2+ Secondary Independent sources (no Primary available) |
-| MEDIUM | ★★ | 1 Primary source only, OR 2+ Secondary Dependent sources |
-| LOW | ★ | 1 Secondary Dependent source only |
+Use the two grades in Section 4 of INTELLIGENCE-STANDARDS.md. The table shows a typical grade for each confidence level.
+
+| Rating | Grade | Criteria |
+|--------|-------|----------|
+| CONFIRMED | A1 | 2+ Primary sources, OR 1 Primary + 1 Secondary Independent |
+| HIGH | A1 | 2+ Secondary Independent sources (no Primary available) |
+| MEDIUM | B2 | 1 Primary source only, OR 2+ Secondary Dependent sources |
+| LOW | C3 | 1 Secondary Dependent source only |
 | CONTESTED | ⚠ | Contradictory evidence across sources — apply Analysis of Competing Hypotheses (ACH) |
 
 ### Independence Assessment
