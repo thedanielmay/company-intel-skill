@@ -42,7 +42,7 @@ If all skills are present, proceed silently without mentioning the check.
 
 ## Disambiguation: company-intel vs topic-intel
 
-Before starting, confirm the subject is a named legal entity, not a broader topic. See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 14 for the full classification table and disambiguation prompt.
+Before starting, confirm the subject is a named legal entity, not a broader topic. See `references/INTELLIGENCE-STANDARDS.md` Section 14 for the full classification table and disambiguation prompt.
 
 | Subject type | Use |
 |---|---|
@@ -97,7 +97,7 @@ Which tier? (1-4, default: 3)
 
 ## Web Access — Four-Layer Architecture
 
-Read `~/.claude/skills/shared/references/web-access-layers.md` for the full four-layer protocol (API -> search-as-router -> scraping service -> Playwright).
+Read `references/web-access-layers.md` for the full four-layer protocol (API -> search-as-router -> scraping service -> Playwright).
 
 **Summary:**
 - **Layer 1 — API-first:** ABR, ACNC (data.gov.au), GrantConnect, AusTender, ASX. Fastest and most reliable.
@@ -112,7 +112,7 @@ Read `~/.claude/skills/shared/references/web-access-layers.md` for the full four
 curl "http://web.archive.org/cdx/search/cdx?url={domain}&output=json&limit=20"
 ```
 
-**Pre-investigation tool check:** Run once at investigation start. See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 15 for the exact commands. Record actual results in `research-log.md`.
+**Pre-investigation tool check:** Run once at investigation start. See `references/INTELLIGENCE-STANDARDS.md` Section 15 for the exact commands. Record actual results in `research-log.md`.
 
 **Cascade failure prevention:** Never run more than 3-4 WebFetch calls in parallel. Put known-slow sources (ACNC website, gov.au) in sequential calls, not batches.
 

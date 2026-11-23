@@ -3,7 +3,7 @@ name: company-intel
 description: "Deep background research and competitive intelligence on any company or organisation. Use this skill whenever the user wants to research a company, investigate a competitor, perform due diligence, understand an organisation's history and people, or prepare for a sales engagement. Triggers include: any mention of 'research [company]', 'look into [company]', 'background on [company]', 'due diligence', 'competitor analysis', 'who is [company]', or any request to understand a company's operations, financials, people, reputation, or digital presence. Also use when preparing for meetings with or pitches to a specific organisation. Even if the user just mentions wanting to know more about a company, invoke this skill."
 license: MIT
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Company Intelligence Research
@@ -40,11 +40,11 @@ Read each file when its trigger fires. Each file holds the detail that this body
 - `company-entity-modules.md`: read at Phase 0 Step 2 for the entity type modules.
 - `company-expert-panels.md`: read at Phase 11 for the expert panel sets.
 - `company-agent-dispatch.md`: read when dispatching parallel agents.
-- `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md`: read first at the start of every investigation.
-- `~/.claude/skills/shared/references/web-access-layers.md`: read for the four-layer web access architecture.
-- `~/.claude/skills/shared/references/layer-4-playwright-protocol.md`: read when Layer 4 is triggered.
+- `references/INTELLIGENCE-STANDARDS.md`: read first at the start of every investigation.
+- `references/web-access-layers.md`: read for the four-layer web access architecture.
+- `references/layer-4-playwright-protocol.md`: read when Layer 4 is triggered.
 
-If a shared reference under `~/.claude/skills/shared/` is missing, say so and carry on with this skill's own steps.
+If a bundled reference under `references/` is missing, say so and carry on with this skill's own steps.
 
 ---
 
@@ -102,7 +102,7 @@ Which tier? (1-4, default: 3)
 
 ## Web Access: Four-Layer Architecture
 
-Read `~/.claude/skills/shared/references/web-access-layers.md` for the full protocol.
+Read `references/web-access-layers.md` for the full protocol.
 
 - Layer 1, API first: ABR, ACNC, GrantConnect, AusTender, ASX. This is the fastest and most reliable layer.
 - Layer 2, search as router: use WebSearch to find the exact URL, then fetch only that URL. Never crawl blind.

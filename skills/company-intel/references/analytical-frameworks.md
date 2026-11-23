@@ -12,10 +12,10 @@ The following framework components live in the shared standards and should be ap
 
 | Component | Location |
 |---|---|
-| Triangulation Matrix | `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §7 |
+| Triangulation Matrix | `references/INTELLIGENCE-STANDARDS.md` §7 |
 | ACH (Analysis of Competing Hypotheses) | See §3 of this file (Contested Claims) — apply ACH format from IS.md §8 |
-| Confirmation Bias / Devil's Advocate | `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §8 step 5 |
-| KIT Answer Register | `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §3 |
+| Confirmation Bias / Devil's Advocate | `references/INTELLIGENCE-STANDARDS.md` §8 step 5 |
+| KIT Answer Register | `references/INTELLIGENCE-STANDARDS.md` §3 |
 
 Do not duplicate these templates here. Reference the shared document.
 
@@ -382,7 +382,7 @@ PATTERN ANALYSIS:
 
 ## Devil's Advocate Protocol
 
-**Full template:** See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §8 step 5.
+**Full template:** See `references/INTELLIGENCE-STANDARDS.md` §8 step 5.
 
 **When to apply:** Before finalising any synthesis. Mandatory for Full Investigation tier.
 

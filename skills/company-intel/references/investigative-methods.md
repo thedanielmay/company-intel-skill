@@ -636,7 +636,7 @@ Sanctions violations carry severe legal penalties including criminal prosecution
 3. Search for at least one independent corroborating source
 4. Check for contradicting sources
 5. Assign confidence: ★★★ (official/audited), ★★ (credible independent), ★ (self-reported/unverified)
-6. If contradicted: apply ACH (see `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §8) and flag with ⚠
+6. If contradicted: apply ACH (see `references/INTELLIGENCE-STANDARDS.md` §8) and flag with ⚠
 
 **Output format:**
 ```

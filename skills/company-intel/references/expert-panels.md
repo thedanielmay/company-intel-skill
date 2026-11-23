@@ -25,7 +25,7 @@ Before generating the final PDF synthesis, run a QA pass through ALL experts. Ea
 
 **When to invoke:** Always, as the final step before PDF generation. Flag any issues found as `[QA FLAG]` annotations in the synthesis.
 
-**Mode 3 scope:** Mode 3 QA covers the full synthesis output — all deliverables listed in `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §9, plus all company-intel-specific outputs (RAG Dashboard, Engagement Playbook, Competitive Profile). It does NOT re-run research phases; it reviews the outputs of Phase 11 synthesis only.
+**Mode 3 scope:** Mode 3 QA covers the full synthesis output — all deliverables listed in `references/INTELLIGENCE-STANDARDS.md` §9, plus all company-intel-specific outputs (RAG Dashboard, Engagement Playbook, Competitive Profile). It does NOT re-run research phases; it reviews the outputs of Phase 11 synthesis only.
 
 ---
 
@@ -282,7 +282,7 @@ When two expert panel reviewers produce contradictory assessments of the same fi
 1. **Record both positions** — do not discard either
 2. **Identify the specific point of disagreement** — is it about the evidence, the interpretation, or the implications?
 3. **Apply ACH** — which position is most consistent with ALL available evidence, not just the evidence each expert weighted most heavily?
-4. **If genuinely unresolvable:** surface both positions in the synthesis output as a Contested Finding (use the Contested Claims Register format from `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §8 step 3)
+4. **If genuinely unresolvable:** surface both positions in the synthesis output as a Contested Finding (use the Contested Claims Register format from `references/INTELLIGENCE-STANDARDS.md` §8 step 3)
 5. **Do not average or paper over the disagreement** — a synthesis that pretends experts agree when they don't misleads the reader
 
 The existence of expert disagreement is itself a finding: it tells the user that this area has legitimate uncertainty that additional research may not resolve.

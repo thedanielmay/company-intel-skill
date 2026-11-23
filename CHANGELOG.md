@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2026-11-23
+
+- Bundles the three shared reference files (intelligence standards, web access layers, layer 4 Playwright protocol), so the skill works without files outside the repo.
+
 ## 1.2.0 - 2026-11-23
 
 - Cut the SKILL.md body from 809 lines to 229 lines.

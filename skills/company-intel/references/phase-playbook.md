@@ -382,7 +382,7 @@ Research does not begin until confirmed.
 
 **Goal:** Transform research into actionable intelligence. This is where information becomes insight.
 
-**Anti-hallucination protocol:** This phase uses three enforcement mechanisms from `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md`:
+**Anti-hallucination protocol:** This phase uses three enforcement mechanisms from `references/INTELLIGENCE-STANDARDS.md`:
 - **Step 0 (Cite-Before-You-Write):** Produce `00-summary/synthesis-source-register.md` before writing any prose
 - **Step 6b (Fabrication Detection Pass):** Apply the Fabrication Red Flags checklist (Section 17) after Expert QA
 - **Step 7b (Numeric Quarantine):** Verify every number against its source file before PDF generation
