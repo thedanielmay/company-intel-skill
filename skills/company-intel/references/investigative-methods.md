@@ -15,7 +15,7 @@ Use this table to identify which techniques are most relevant for each investiga
 | Phase 0 — Scoping | Subject disambiguation, OSINT pre-check | — |
 | Phase 1 — Foundation | Corporate register search, ABR lookup | ASIC extract |
 | Phase 2 — Financials | ACNC financial extraction, ratio analysis | Glassdoor (headcount proxy) |
-| Phase 3 — People | LinkedIn protocol (Layer 4), AEC donations search | Media archive search |
+| Phase 3 — People | LinkedIn public data (Layers 1 to 3), AEC donations search | Media archive search |
 | Phase 4 — Commercial | Web presence analysis, job posting analysis | TXT record OSINT |
 | Phase 5 — Market | Competitor profiling, market sizing via ABS | AusTender/GrantConnect |
 | Phase 6 — Reputation | Media timeline construction, Glassdoor analysis | Court record search (AustLII) |
@@ -409,7 +409,7 @@ Current employees are constrained in what they can say. Former employees are not
   - Cross-connections with clients, funders, and board members
   - Gaps where expected recommendations are absent (former colleagues who notably do not endorse each other)
 - Cross-reference the recommender network with known clients, funders, board members, and partners. Overlaps reveal relationship depth; absences reveal relationship gaps.
-- **Layer 4 required:** See `layer-4-playwright-protocol.md` for LinkedIn authenticated access patterns.
+- **Public data only:** Use public recommender data through Layers 1 to 3, or content the user pastes. LinkedIn is not a Layer 4 target.
 
 ---
 
@@ -466,7 +466,7 @@ A thin file is itself a signal. A company that claims significant revenue, numer
 - Search for historical job postings: site:seek.com.au "company name", site:indeed.com.au "company name", site:linkedin.com "company name" jobs.
 - Expired job postings reveal: roles the company was trying to fill (and whether they succeeded), salary ranges offered, required qualifications, and technology stack.
 - Postings that remain open for extended periods suggest difficulty attracting talent or, sometimes, postings used for market research rather than genuine recruitment.
-- **Layer 4 required:** See `layer-4-playwright-protocol.md` for LinkedIn job page scraping (bot detection applies).
+- **Public data only:** Use public job postings through Layers 1 to 3, or content the user pastes. LinkedIn is not a Layer 4 target.
 
 ---
 

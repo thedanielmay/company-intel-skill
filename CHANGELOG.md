@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0 - 2026-11-23
+
+- Made Layer 4 (Playwright) opt in per source. The skill names the source and the reason before each ask, and logs a gap on a no or a missing install.
+- Removed the headed login capture and headless cookie reuse template. A source behind a login is a gap unless the user reads it and pastes what they want used.
+- Removed stealth, user-agent spoofing and the stealth installation check. Playwright now runs as a normal browser that identifies as automation.
+- Removed LinkedIn from Layer 4 target lists. Phase 4 uses only public content from Layers 1 to 3 or content the user pastes.
+- Aligned rule 10 and the intelligence standards on one public-source access rule that respects each site's terms and robots rules.
+- Removed machine-specific Python paths, cookie paths and session dates. Detection now tries `python3 -c "import playwright"` and skips Layer 4 when the import fails.
+
 ## 1.3.0 - 2026-11-23
 
 - Bundles the three shared reference files (intelligence standards, web access layers, layer 4 Playwright protocol), so the skill works without files outside the repo.

@@ -205,7 +205,7 @@ PRIVACY AND COMPLIANCE CHECKPOINT
 
 ## Phase 4: LinkedIn Deep Dive
 
-**Goal:** Extract maximum intelligence from LinkedIn — the richest public source for people, structure, and trajectory.
+**Goal:** Extract maximum intelligence from LinkedIn's public pages for people, structure, and trajectory.
 
 1. **Company page** — employee count, growth trend, specialties, locations, posts, engagement, "People Also Viewed" peers.
 2. **Employee mapping** — reconstruct org chart from titles. Map leadership, middle management, specialists. Team size by function. Former employee exit destinations. New hire entry sources. Tenure distribution.
@@ -213,7 +213,7 @@ PRIVACY AND COMPLIANCE CHECKPOINT
 4. **Job postings** — current openings, skills sought, salary ranges, remote/hybrid, growth signals.
 5. **Network intelligence** — who engages with their posts, thought leadership positioning.
 
-**Note:** LinkedIn data accessibility varies. Flag which findings depend on publicly accessible data vs data that would require Sales Navigator.
+**Access rule:** Use only what is publicly visible without login through Layers 1 to 3, or what the user reads and pastes. LinkedIn is not a Layer 4 target. Do not use Playwright for LinkedIn. Log anything behind a login as a gap with the reason. If the user pastes content, cite it as user-provided.
 
 **Save to:** `04-social-media/linkedin-*` files | **Quick Scan:** Company page + founder profiles only.
 
