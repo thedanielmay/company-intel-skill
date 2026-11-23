@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0 - 2026-11-23
+
+- Added sanctions and PEP screening of the company, directors and beneficial owners against the DFAT, OFAC, UN, UK and EU lists and against PEP data. Each check records its date. A name match is a possible match until identity matching confirms it. A clear result reads "no match found on <date>", not "clean".
+- Added an identity matching rule for director and person searches. Two records link only when two independent identifiers agree. A name alone never links them. Unconfirmed matches are reported as separate people.
+- Added a cost note for ASIC company and person extracts and other paid register extracts. The skill asks the user before buying an extract and names the register and price shown.
+- Moved director and beneficial owner property and home address searches behind the Phase 0 privacy checkpoint. They run only when the user confirms a due diligence purpose that needs them.
+
 ## 1.4.0 - 2026-11-23
 
 - Made Layer 4 (Playwright) opt in per source. The skill names the source and the reason before each ask, and logs a gap on a no or a missing install.
