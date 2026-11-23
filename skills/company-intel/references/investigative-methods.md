@@ -635,7 +635,7 @@ Sanctions violations carry severe legal penalties including criminal prosecution
 2. Identify the source where this claim originated
 3. Search for at least one independent corroborating source
 4. Check for contradicting sources
-5. Assign confidence: ★★★ (official/audited), ★★ (credible independent), ★ (self-reported/unverified)
+5. Assign a grade: A1 (official/audited), B2 (credible independent), C3 (self-reported/unverified)
 6. If contradicted: apply ACH (see `references/INTELLIGENCE-STANDARDS.md` §8) and flag with ⚠
 
 **Output format:**
@@ -644,5 +644,5 @@ Claim: [precise statement]
 Origin: [source name, type, date]
 Corroboration: [source name, type] OR "None found — saturation reached after [N] searches"
 Contradiction: [source name, type, nature of contradiction] OR "None"
-Confidence: [★★★/★★/★] OR [⚠ contradicted]
+Grade: [A1/B2/C3] OR [⚠ contradicted]
 ```

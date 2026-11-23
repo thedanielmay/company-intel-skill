@@ -128,12 +128,17 @@ PRIVACY AND COMPLIANCE CHECKPOINT
    public figures and whose private life might be surfaced inadvertently?
    [yes / no — if yes, scope exclusions must address this]
 
-4. Will Playwright (Layer 4) be used? If yes, note that:
+4. Does this investigation need director or beneficial owner property or home address searches?
+   [yes / no. Answer yes only for a due diligence purpose that needs these searches]
+
+5. Will Playwright (Layer 4) be used? If yes, note that:
    - Research leaves traces visible in website analytics
    - LinkedIn notifies profile owners when viewed
    - Some platforms prohibit scraping in their Terms of Service
    - Spread research across sessions for sensitive investigations
 ```
+
+**Director property and home address searches sit behind this checkpoint.** For the people described in question 3 who are not public figures, run these searches only when question 4 is yes and the user has confirmed a due diligence purpose that needs them. Skip these searches for every other purpose. Record the answer in `00-summary/company-scoping.md`.
 
 **What this checkpoint does NOT replace:** Legal advice for high-stakes investigations. For due diligence involving personal data at scale, consult a privacy lawyer before proceeding. The Privacy Act 1988 (Cth) and the APPs apply when personal information about identifiable individuals is collected for commercial purposes.
 
@@ -166,9 +171,19 @@ PRIVACY AND COMPLIANCE CHECKPOINT
    Is this the right entity? (yes/no)
    ```
 4. If ambiguous, present all candidates and let the user choose.
-5. **Related Entity Discovery:** For every director identified, search ASIC for all other companies where they hold/have held directorships. Map the corporate constellation. Note shared addresses, auditors, company secretaries. See `references/investigative-methods.md` Section 2.
-6. Create the research folder structure (see Folder Structure below).
-7. Save identification data to `01-identification/`.
+5. **Related Entity Discovery:** For every director identified, search ASIC for all other companies where they hold/have held directorships. Map the corporate constellation. Note shared addresses, auditors, company secretaries. Apply the identity matching rule in Phase 5 to every director found before you link records. See `references/investigative-methods.md` Section 2.
+6. **Sanctions and PEP screening.** Screen the company, each director and each beneficial owner against these lists:
+   - Australian DFAT Consolidated List
+   - US OFAC SDN list
+   - UN Security Council list
+   - UK sanctions list
+   - EU consolidated list
+
+   Screen the same people against politically exposed person (PEP) data. OpenSanctions is one free aggregator. Record the date of every check.
+
+   A name match is a possible match. It is never a finding until the identity matching rule in Phase 5 confirms the person. Write "no match found on <date>" for a clear result. Do not write "clean".
+7. Create the research folder structure (see Folder Structure below).
+8. Save identification data to `01-identification/`.
 
 **Exit criteria:** Entity confirmed. Corporate constellation mapped. Folder structure created.
 
@@ -231,18 +246,29 @@ Twitter/X, Facebook, Instagram, TikTok, YouTube channel. Per-platform: followers
 
 This is a deep phase. Read `references/australian-data-sources.md` for the full register of sources and `references/investigative-methods.md` for forensic techniques.
 
+### Identity matching rule (all director and person searches)
+
+Use this rule when a director search or person search produces two records that appear to describe the same person.
+
+- Treat two records as the same person only when at least two independent identifiers agree.
+- Acceptable identifiers include a full name with a date of birth, a full name with a birth month and year, a director ID, a residential locality, and the same set of company appointments.
+- A name alone never links two records.
+- When two records do not reach two agreements, report both records and state that the match is unconfirmed. Do not merge them.
+
 ### Core Searches
 1. **Corporate registrations** — ASIC (full extract including historical document history), ABN Lookup (including Historical Details tab), ACNC for charities, ASX for listed companies.
 
-**Data-currency warning (applies to all registry sources):** Official registry data (ASIC, ACNC, ABR) reflects filings as of lodgement date. Corporate restructures, director changes, and address updates may lag weeks to months. Apply ★★★ confidence for official status, but always note the last-lodged date and flag that the structure may not reflect the current position. The entity-type module (loaded in Phase 0) specifies the typical lag for this entity type. Cross-reference any ASIC-derived structural finding against at least one other source (LinkedIn, media, company website) to check for signs of change.
+**Data-currency warning (applies to all registry sources):** Official registry data (ASIC, ACNC, ABR) reflects filings as of lodgement date. Corporate restructures, director changes, and address updates may lag weeks to months. Apply an A1 grade for official status, but always note the last-lodged date and flag that the structure may not reflect the current position. The entity-type module (loaded in Phase 0) specifies the typical lag for this entity type. Cross-reference any ASIC-derived structural finding against at least one other source (LinkedIn, media, company website) to check for signs of change.
 
 2. **Historical corporate structure** — Map name changes, director rotations, address shifts, share transfers over time ("Shedding Skin" technique). See `references/investigative-methods.md` Section 1.
 3. **Financial data** — ACNC financials, annual reports, ASX filings, government grant data (GrantConnect, state databases), tender history (AusTender + state portals).
 4. **Financial analysis** — Read `references/analytical-frameworks.md` for: revenue decomposition, common-size financial statements, unit economics estimation, normalised earnings, working capital analysis, revenue sustainability scorecard.
 5. **Legal and compliance** — AustLII (primary, all jurisdictions), Federal Court, state tribunals, Fair Work Commission, ACCC enforcement register, PPSR, ASIC Banned & Disqualified Register. See `references/investigative-methods.md` Section 7.
-6. **Beneficial ownership tracing** — Follow corporate chains, trust structures, nominee arrangements. See `references/investigative-methods.md` Section 3.
+6. **Beneficial ownership tracing** — Follow corporate chains, trust structures, nominee arrangements. Screen every beneficial owner found against the sanctions lists and PEP data from Phase 1. Record the date of each check. See `references/investigative-methods.md` Section 3.
 7. **Regulatory registers** — Industry-specific: AFSL, NDIS Commission, Aged Care Commission, EPA, WorkSafe, Modern Slavery Register, OAIC, as applicable.
-8. **Property searches** — State land title offices for company and director property holdings. See `references/investigative-methods.md` Section 4.
+8. **Property and home address searches.** State land title offices hold company property records. Run director and beneficial owner property or home address searches only when the privacy checkpoint at Phase 0 Step 7 confirms a due diligence purpose that needs them. Skip them for every other purpose. See `references/investigative-methods.md` Section 4.
+
+**Cost note for paid registers.** ASIC company extracts, ASIC person extracts and other paid register extracts cost money per search. Ask the user before buying any paid extract. Name the register and the price shown in the ask. Do not buy an extract without that approval.
 
 ### Social Enterprise Financial Deep Dive (if applicable)
 For social enterprises/NFPs, additionally assess: earned income ratio, revenue concentration risk (top 1/3/5 funders), grant cliff risk, reserves ratio (months), workforce cost ratio, group structure complexity, DGR status. See `references/analytical-frameworks.md` Social Enterprise Frameworks section.
@@ -269,6 +295,7 @@ For each Tier 1 person, follow connections 2-3 degrees out:
 
 ### Background Checks
 - ASIC disqualified director search, court/tribunal records (AustLII), professional register checks, political donation searches (AEC transparency register), lobbyist register.
+- Apply the identity matching rule in Phase 5 before you merge any two person records. Report unconfirmed matches as separate people.
 - See `references/investigative-methods.md` Section 12 for exit pattern analysis and recommender network technique.
 
 ### Behavioural and Communication Analysis
@@ -408,7 +435,7 @@ Before proceeding to frameworks or deliverables, produce a structured answer for
 ```
 KIT [N]: [question]
 Answer:      [direct answer — 2–5 sentences. Lead with the answer, not the caveats.]
-Confidence:  [★★★ / ★★ / ★]
+Grade:       [A1 / B2 / C3]
 Key sources: [2–3 most authoritative sources used]
 Gaps:        [what would improve confidence if found]
 ```

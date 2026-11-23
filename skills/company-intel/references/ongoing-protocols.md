@@ -18,7 +18,7 @@ See `references/INTELLIGENCE-STANDARDS.md` Section 13 for the standard research 
 
 ## Confidence Rating System
 
-See `references/INTELLIGENCE-STANDARDS.md` Section 4 for the full confidence rating system and source independence rule. Apply ★★★/★★/★/⚠ ratings to every piece of information recorded.
+See `references/INTELLIGENCE-STANDARDS.md` Section 4 for the full grading system, the funder check and the source independence rule. Apply two grades to every piece of information recorded: source reliability A to F and information credibility 1 to 6, written together (for example B2). Keep the ⚠ flag for claims contradicted by another source.
 
 **Source independence matters.** Two sources citing the same original report = one source.
 
