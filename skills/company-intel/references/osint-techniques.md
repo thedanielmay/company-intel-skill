@@ -1280,9 +1280,9 @@ Social media platforms are high-value OSINT sources for company research — the
 - Job postings: hiring signals about strategic direction, technology stack, geographic expansion
 
 **Access notes:**
-- Company pages: WebFetch works for basic info; deeper data requires Layer 3 or Layer 4
-- Individual profiles: Layer 4 (Playwright) required — see `layer-4-playwright-protocol.md` for the LinkedIn-specific protocol
-- LinkedIn profile views notify the profile owner — inform the user before viewing
+- Company pages: WebFetch works for basic info; use Layer 3 for public JS-rendered data. LinkedIn is not a Layer 4 target.
+- Individual profiles: use public data from Layers 1 to 3, or content the user pastes. Do not use Playwright for LinkedIn.
+- LinkedIn profile views notify the profile owner. Inform the user before viewing.
 - Employee count on the company page is rounded and updated by LinkedIn; treat as ±10% estimate
 
 **Hiring signal interpretation:**
@@ -1343,8 +1343,8 @@ Social media platforms are high-value OSINT sources for company research — the
 
 | Platform | Layer 1 (API) | Layer 2 (WebFetch) | Layer 3 (ScrapingBee) | Layer 4 (Playwright) |
 |---|---|---|---|---|
-| LinkedIn company page | No | Partial | Yes (render_js=true) | Yes |
-| LinkedIn individual profile | No | No | Partial | Yes (preferred) |
+| LinkedIn company page | No | Partial | Yes (render_js=true) | Not used |
+| LinkedIn individual profile | No | No | Partial | Not used |
 | Twitter/X profile | No | Partial | Yes | Yes |
 | YouTube | No | Yes | Not needed | Not needed |
 | Facebook Ad Library | No | Blocked | Yes (render_js=true) | Yes |

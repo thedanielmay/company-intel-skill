@@ -103,9 +103,9 @@ Read `references/web-access-layers.md` for the full four-layer protocol (API -> 
 - **Layer 1 — API-first:** ABR, ACNC (data.gov.au), GrantConnect, AusTender, ASX. Fastest and most reliable.
 - **Layer 2 — Search as router:** Use WebSearch to find the exact URL, then fetch only that URL. Never crawl blind.
 - **Layer 3 — Scraping service:** When WebFetch returns blocked/empty content and a service is configured.
-- **Layer 4 — Playwright:** Universal fallback. Always attempt before declaring a source inaccessible.
+- **Layer 4 — Playwright:** Opt in. Use it only after the user says yes for the named source.
 
-**Universal fallback rule:** If Layers 1-3 fail or are inapplicable, ALWAYS attempt Layer 4 before logging a gap. Known company-intel sources requiring Layer 4: ACNC charity profile pages, Glassdoor, Facebook Ad Library, ASIC Connect search results, LinkedIn company and profile pages, any gov.au page returning a CAPTCHA or session error.
+**Opt-in rule:** If Layers 1 to 3 fail or are inapplicable, tell the user the source and the reason. Run Layer 4 only after the user says yes for that source. On a no, or when Playwright is not installed, log the source as a gap with the reason. Do not use Layer 4 on a source behind a login. Sources that often need Layer 4: ACNC charity profile pages, Glassdoor, Facebook Ad Library, ASIC Connect search results, any gov.au page returning a CAPTCHA or session error.
 
 **Wayback Machine:** web.archive.org is blocked. Use the CDX API:
 ```bash

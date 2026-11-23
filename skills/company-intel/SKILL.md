@@ -3,7 +3,7 @@ name: company-intel
 description: "Deep background research and competitive intelligence on any company or organisation. Use this skill whenever the user wants to research a company, investigate a competitor, perform due diligence, understand an organisation's history and people, or prepare for a sales engagement. Triggers include: any mention of 'research [company]', 'look into [company]', 'background on [company]', 'due diligence', 'competitor analysis', 'who is [company]', or any request to understand a company's operations, financials, people, reputation, or digital presence. Also use when preparing for meetings with or pitches to a specific organisation. Even if the user just mentions wanting to know more about a company, invoke this skill."
 license: MIT
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # Company Intelligence Research
@@ -107,9 +107,9 @@ Read `references/web-access-layers.md` for the full protocol.
 - Layer 1, API first: ABR, ACNC, GrantConnect, AusTender, ASX. This is the fastest and most reliable layer.
 - Layer 2, search as router: use WebSearch to find the exact URL, then fetch only that URL. Never crawl blind.
 - Layer 3, scraping service: use when WebFetch returns blocked content and a service is configured.
-- Layer 4, Playwright: the universal fallback. Attempt it before declaring a source inaccessible.
+- Layer 4, Playwright: opt in. Use it only after the user says yes for the named source.
 
-**Universal fallback rule:** if Layers 1 to 3 fail or do not apply, always attempt Layer 4 before logging a gap. Sources that often need Layer 4 include ACNC charity profile pages, Glassdoor, Facebook Ad Library, ASIC Connect search results, LinkedIn company and profile pages, and any gov.au page with a CAPTCHA or session error.
+**Opt-in rule:** if Layers 1 to 3 fail or do not apply, tell the user the source and the reason. Run Layer 4 only after the user says yes for that source. On a no, or when Playwright is not installed, log the source as a gap with the reason. Do not use Layer 4 on a source behind a login. Sources that often need Layer 4 include ACNC charity profile pages, Glassdoor, Facebook Ad Library, ASIC Connect search results, and any gov.au page with a CAPTCHA or session error.
 
 **Wayback Machine:** web.archive.org is blocked. Use the CDX API:
 
@@ -149,7 +149,7 @@ Find articles, interviews, podcasts and videos, including negative coverage. Cap
 
 ### Phase 4: LinkedIn Deep Dive
 
-Extract company page data, map the org chart, profile key people and read job postings. Flag findings that need publicly accessible data as opposed to Sales Navigator. Save to `04-social-media/`. Full steps are in `references/phase-playbook.md`.
+Use only what is publicly visible without login through Layers 1 to 3, or what the user reads and pastes. Extract company page data, map the org chart, profile key people and read job postings. Flag anything that needs a login as a gap with the reason. LinkedIn is not a Layer 4 target. Save to `04-social-media/`. Full steps are in `references/phase-playbook.md`.
 
 ### Phase 4b: Other Social Media
 
@@ -240,5 +240,5 @@ Post the wave summary after every wave. The format is in INTELLIGENCE-STANDARDS.
 7. Actionable outputs. The reader must know what to do, not just what to think.
 8. Expert QA. Route synthesis through expert panels before finalising.
 9. Be transparent about limitations. State assumptions, note stale data and flag access limits.
-10. Ethical boundaries. Use public sources only. Do not misrepresent identity or access authenticated systems. Comply with the Privacy Act and other applicable law.
-11. Universal Layer 4 fallback. If Layers 1 to 3 fail, try Playwright before declaring a source inaccessible. This applies to ACNC, Glassdoor, Facebook, ASIC Connect and gov.au pages.
+10. Ethical boundaries and access. Use public sources only. Do not misrepresent identity or access authenticated systems. Do not use stealth tools or session cookies. Respect each site's terms of service and robots rules. Comply with the Privacy Act and other applicable law.
+11. Layer 4 is opt in. If Layers 1 to 3 fail, name the source and the reason to the user. Use Playwright only after the user says yes for that source. On a no, or when Playwright is not installed, log the source as a gap with the reason.
