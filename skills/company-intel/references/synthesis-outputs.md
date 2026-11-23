@@ -917,7 +917,7 @@ PROBABILITIES MUST SUM TO 100%
 
 ## Monitoring Plan
 
-Template lives in `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §11. Use that template exactly.
+Template lives in `references/INTELLIGENCE-STANDARDS.md` §11. Use that template exactly.
 
 **company-intel extension — standard alert terms to include:**
 | Alert term | Why |
@@ -932,7 +932,7 @@ Template lives in `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md`
 
 ## Assumptions and Limitations
 
-Template lives in `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §12. Use that template exactly.
+Template lives in `references/INTELLIGENCE-STANDARDS.md` §12. Use that template exactly.
 
 **company-intel extension — standard limitations to always note:**
 - ACNC financial statements have a 12–18 month publication lag
@@ -1003,7 +1003,7 @@ investigation. Questions are ordered by priority.
 
 ## Information Gaps Register
 
-Template lives in `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` §10. Use that template exactly.
+Template lives in `references/INTELLIGENCE-STANDARDS.md` §10. Use that template exactly.
 
 **company-intel extension:** The following areas are most commonly gap-prone in company investigations:
 - ASIC-registered charges and security interests (often not publicly searchable)

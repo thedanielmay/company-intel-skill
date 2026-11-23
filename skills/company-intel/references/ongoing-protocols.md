@@ -4,13 +4,13 @@ Read this file during and after the research waves. It holds progress reporting,
 
 ## Progress Reporting
 
-See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 6 for the mandatory wave summary format. Post after every wave before proceeding to the next. Not optional.
+See `references/INTELLIGENCE-STANDARDS.md` Section 6 for the mandatory wave summary format. Post after every wave before proceeding to the next. Not optional.
 
 ---
 
 ## Research Log Format
 
-See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 13 for the standard research log format. Append to `research-log.md` throughout the investigation.
+See `references/INTELLIGENCE-STANDARDS.md` Section 13 for the standard research log format. Append to `research-log.md` throughout the investigation.
 
 **company-intel addition:** Each entry that records ASIC, ACNC, or other registry data must include: `Last-lodged date: [date]` and `Data-currency risk: [high / medium / low]`.
 
@@ -18,7 +18,7 @@ See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 13 fo
 
 ## Confidence Rating System
 
-See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 4 for the full confidence rating system and source independence rule. Apply ★★★/★★/★/⚠ ratings to every piece of information recorded.
+See `references/INTELLIGENCE-STANDARDS.md` Section 4 for the full confidence rating system and source independence rule. Apply ★★★/★★/★/⚠ ratings to every piece of information recorded.
 
 **Source independence matters.** Two sources citing the same original report = one source.
 
@@ -26,7 +26,7 @@ See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 4 for
 
 ## Source Saturation Rule
 
-See `~/.claude/skills/shared/references/INTELLIGENCE-STANDARDS.md` Section 5 for the source saturation rule. When two consecutive search queries on the same subject area return no new sources, declare saturation for that area and move on.
+See `references/INTELLIGENCE-STANDARDS.md` Section 5 for the source saturation rule. When two consecutive search queries on the same subject area return no new sources, declare saturation for that area and move on.
 
 Saturation is a valid finding — note it explicitly in the relevant phase file and in the Information Gaps output.
 
