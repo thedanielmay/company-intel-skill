@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 - 2026-11-23
+
+- Cut the SKILL.md body from 809 lines to 229 lines.
+- Added references/investigation-setup.md for setup, disambiguation, menus, tiers, web access and the folder tree.
+- Added references/phase-playbook.md for the full step-by-step detail of Phases 0 to 11.
+- Added references/ongoing-protocols.md for progress, the research log, confidence, saturation and refresh.
+- Repointed SKILL.md at every reference file with a line saying when to read it.
+- Bumped the version in plugin.json and SKILL.md frontmatter to 1.2.0.
+
 ## 1.1.3 - 2026-11-23
 
 - Adds the marketplace icon approved by Daniel (thedanielmay/agent-tools#2).
