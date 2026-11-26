@@ -1,5 +1,7 @@
 # company-intel skill
 
+> **Moved.** This skill is now the company mode of [research-intel](https://github.com/thedanielmay/research-intel-skill). This repository gets no more updates.
+
 Deep background research and competitive intelligence on any named company or organisation.
 
 ## What it researches
