@@ -1,12 +1,14 @@
 ---
 name: company-intel
-description: "Deep background research and competitive intelligence on a named company or organisation. Use this skill when the user asks for research, due diligence, a dossier, a deep dive, a brief or intelligence on a named subject, or names this skill. Triggers include: 'research [company]', 'due diligence on [company]', 'background on [company]', 'competitor analysis', 'who is [company]', 'prepare a dossier on [company]'. Also use when preparing for meetings with or pitches to a specific organisation. For an industry, market, sector, policy or regulation rather than one named entity, use topic-intel instead."
+description: "Moved to the research-intel skill (company mode): use research-intel when it is installed. Deep background research and competitive intelligence on a named company or organisation. Use this skill when the user asks for research, due diligence, a dossier, a deep dive, a brief or intelligence on a named subject, or names this skill. Triggers include: 'research [company]', 'due diligence on [company]', 'background on [company]', 'competitor analysis', 'who is [company]', 'prepare a dossier on [company]'. Also use when preparing for meetings with or pitches to a specific organisation. For an industry, market, sector, policy or regulation rather than one named entity, use topic-intel instead."
 license: MIT
 metadata:
-  version: "1.6.1"
+  version: "1.6.2"
 ---
 
 # Company Intelligence Research
+
+**Moved.** This skill is now the company mode of `research-intel`. When `research-intel` is installed, use it instead. If not, tell the user once that this skill gets no more updates, then continue.
 
 ## Overview
 
