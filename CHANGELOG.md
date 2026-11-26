@@ -3,6 +3,7 @@
 ## 1.6.1 - 2026-11-26
 
 - The check for a scraping service key prints only whether it is set. It never prints the key.
+- Every key check covers the same four services, including ScraperAPI.
 
 ## 1.6.0 - 2026-11-23
 
