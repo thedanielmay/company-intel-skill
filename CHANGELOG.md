@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.1 - 2026-11-26
+
+- The check for a scraping service key prints only whether it is set. It never prints the key.
+- Every key check covers the same four services, including ScraperAPI.
+
 ## 1.6.0 - 2026-11-23
 
 - Narrowed the description so the skill starts on a request for research, due diligence, a dossier, a deep dive, a brief or intelligence on a named subject, or when the user names the skill. Removed the phrases that started the skill on any mention of a company. Kept the note that sends industry, market, sector, policy and regulation subjects to topic-intel.
